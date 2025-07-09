@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../public/script.js"
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Sharding Demo</title>
+		<script src="/script.js" defer></script>
+	</head>
+	<body style="font-family: sans-serif; max-width: 600px; margin: auto;">
+		<h1>🧩 Sharding Demo</h1>
+
+		<form id="post-form">
+		<label>User ID: <input type="number" id="userId" required /></label><br />
+		<label>Contenido: <input type="text" id="content" required /></label><br />
+		<button type="submit">Crear Post</button>
+		</form>
+
+		<hr />
+
+		<form id="get-form">
+		<label>User ID: <input type="number" id="queryUserId" required /></label>
+		<button type="submit">Consultar Posts</button>
+		</form>
+
+		<div id="result" style="margin-top: 20px;"></div>
+	</body>
+</html>

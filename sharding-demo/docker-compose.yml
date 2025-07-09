@@ -1,0 +1,16 @@
+services:
+  shard0:
+    image: mongo:6
+    container_name: mongo-shard0
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data/shard0:/data/db
+
+  shard1:
+    image: mongo:6
+    container_name: mongo-shard1
+    ports:
+      - 27018:27017
+    volumes:
+      - ./data/shard1:/data/db
