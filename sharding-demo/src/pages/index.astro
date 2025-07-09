@@ -1,6 +1,3 @@
----
-import "../public/script.js"
----
 
 <html lang="en">
 	<head>
@@ -12,18 +9,29 @@ import "../public/script.js"
 		<h1>🧩 Sharding Demo</h1>
 
 		<form id="post-form">
-		<label>User ID: <input type="number" id="userId" required /></label><br />
-		<label>Contenido: <input type="text" id="content" required /></label><br />
-		<button type="submit">Crear Post</button>
+			<label>User ID: <input type="number" id="userId" required /></label><br />
+			<label>Contenido: <input type="text" id="content" required /></label><br />
+			<button type="submit">Crear Post</button>
 		</form>
 
 		<hr />
 
 		<form id="get-form">
-		<label>User ID: <input type="number" id="queryUserId" required /></label>
-		<button type="submit">Consultar Posts</button>
+			<label>User ID: <input type="number" id="queryUserId" required /></label>
+			<button type="submit">Consultar Posts</button>
 		</form>
 
 		<div id="result" style="margin-top: 20px;"></div>
+
+		<hr />
+
+		<hr />
+
+		<button id="load-btn">Simular 100 posts aleatorios</button>
+
+		<hr />
+
+		<button id="count-btn">Ver distribución por shard</button>
+		<div id="shard-stats" style="margin-top: 15px;"></div>
 	</body>
 </html>
