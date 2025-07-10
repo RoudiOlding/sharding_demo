@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         const data = await res.json()
-        alert(`✅ Post creado en ${data.shard}`)
+        alert(`Post creado en ${data.shard}`)
         postForm.reset()
     })
 
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         resultDiv.innerHTML = `
         <div style="padding: 10px; background-color: ${shardColor}; border-radius: 8px;">
-            <h3>📦 Shard: ${data.shard}</h3>
+            <h3>Shard: ${data.shard}</h3>
             <ul>
             ${data.posts
                 .map(
@@ -84,6 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
             results[data.shard] += 1
         }
 
-        alert(`✅ Carga completada.\nShard0: ${results.shard0} posts\nShard1: ${results.shard1} posts`)
+        alert(`Carga completada.\nShard0: ${results.shard0} posts\nShard1: ${results.shard1} posts`)
     })
 })

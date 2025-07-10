@@ -1,4 +1,3 @@
-// src/backend/app.js
 import express from 'express'
 import cors from 'cors'
 import postsRouter from './routes/posts.js'

@@ -5,7 +5,12 @@ Demo funcional para el curso de Arquitectura de Software.
 
 1. Iniciar proceso
 ```
-docker compose up -d
+docker compose down -v
+docker compose up -d # terminal 1
+
+node src/backend/app.js # terminal 1
+
+npm run dev # terminal 2
 
 ```
 
